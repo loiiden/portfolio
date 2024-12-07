@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div class="events-section">
+    <h1 class="section-title">Events</h1>
+    <ul class="events-list">
+        {% for event in events %}
+            <li class="event-item">
+                <div class="event-content">
+                    
+                    <div class="event-details">
+                        <h2 class="event-title">{{ event.title }}</h2>
+                        <p class="event-date">{{ event.date }}</p>
+                        <p class="event-description">{{ event.description }}</p>
+                        {% if event.place %}
+                            <p class="event-place"><strong>Address:</strong> {{ event.place }}</p>
+                        {% endif %}
+                    </div>
+                    {% if event.image %}
+                        <div class="event-image">
+                            <img src="{{ event.image.url }}" alt="{{ event.title }}">
+                        </div>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

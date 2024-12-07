@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Publications{% endblock %}
+
+{% block content %}
+<div class="publications-section">
+    <h1 class="section-title">Publications</h1>
+    <ul class="publications-list">
+        {% for publication in publications %}
+            <li class="publication-item">
+                <div class="publication-header">
+                    <strong class="publication-title">{{ publication.title }}</strong>
+                    <span class="publication-date">{{ publication.date }}</span>
+                    
+                </div>
+                <div class="publication-content">
+                    <p class="publication-description">{{ publication.description }}</p>
+                    <a href="{{ publication.file.url }}" download class="publication-download">Download</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
