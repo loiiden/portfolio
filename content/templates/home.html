@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="welcome-saying">
-    <h1>Alla Petukhina's Homepage</h1>
+    <h1>{{ content.title }}</h1>
 </div>
 <div class="homepage-content">
+    
     <div class="homepage-image">
 
     </div>
+    {{ content.description }}
 </div>
 {% endblock %}

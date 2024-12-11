@@ -3,10 +3,12 @@ from django.shortcuts import render
 # Create your views here.
 
 from django.shortcuts import render
-from .models import Publication, Event, Talk, Course
+from .models import Publication, Event, Talk, Course, HomepageContent
+
 
 def home(request):
-    return render(request, 'home.html')
+    content = HomepageContent.objects.first()
+    return render(request, 'home.html', {'content': content})
 
 def publications(request):
     publications = Publication.objects.all()
