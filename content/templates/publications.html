@@ -9,7 +9,11 @@
         {% for publication in publications %}
             <li class="publication-item">
                 <div class="publication-header">
-                    <strong class="publication-title">{{ publication.title }}</strong>
+                    {% if publication.link %}
+                        <strong class="publication-title"><a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a></strong>
+                    {% else %}
+                        <strong class="publication-title">{{ publication.title }}</strong>
+                    {% endif %}
                     <span class="publication-date">{{ publication.date }}</span>
                     
                 </div>

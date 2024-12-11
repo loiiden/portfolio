@@ -3,11 +3,32 @@
 {% block title %}Courses{% endblock %}
 
 {% block content %}
-<h1>Courses</h1>
-<p>Here are the courses available:</p>
-<ul>
-    {%for course in courses%}
-    <li>{{course.title}}</li>
-    {% endfor %}
-</ul>
+<div class="courses-section">
+    <h1 class="section-title">Courses</h1>
+    <ul class="courses-list">
+        {% for course in courses %}
+            <li class="course-item">
+                <div class="course-content">
+                    <div class="course-details">
+                        {% if course.link %}
+                            <h2 class="course-title"><a href="{{ course.link }}" target="_blank" rel="noopener noreferrer">{{ course.title }}</a></h2>
+                        {% else %}
+                            <h2 class="course-title">{{ course.title }}</h2>
+                        {% endif %}
+                        <p class="course-date">{{ course.date }}</p>
+                        <p class="course-description">{{ course.description }}</p>
+                        {% if course.place %}
+                            <p class="course-place"><strong>Location:</strong> {{ course.place }}</p>
+                        {% endif %}
+                    </div>
+                    {% if course.image %}
+                        <div class="course-image">
+                            <img src="{{ course.image.url }}" alt="{{ course.title }}">
+                        </div>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

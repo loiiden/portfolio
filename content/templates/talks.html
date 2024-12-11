@@ -3,13 +3,32 @@
 {% block title %}Talks{% endblock %}
 
 {% block content %}
-<h1>Talks</h1>
-<ul>
-    {% for talk in talks %}
-        <li>
-            <strong>{{ talk.title }}</strong> — {{ talk.date }}
-            <p>{{ talk.description }}</p>
-        </li>
-    {% endfor %}
-</ul>
+<div class="talks-section">
+    <h1 class="section-title">Talks</h1>
+    <ul class="talks-list">
+        {% for talk in talks %}
+            <li class="talk-item">
+                <div class="talk-content">
+                    <div class="talk-details">
+                        {% if talk.link %}
+                            <h2 class="talk-title"><a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.title }}</a></h2>
+                        {% else %}
+                            <h2 class="talk-title">{{ talk.title }}</h2>
+                        {% endif %}
+                        <p class="talk-date">{{ talk.date }}</p>
+                        <p class="talk-description">{{ talk.description }}</p>
+                        {% if talk.place %}
+                            <p class="talk-place"><strong>Address:</strong> {{ talk.place }}</p>
+                        {% endif %}
+                    </div>
+                    {% if talk.image %}
+                        <div class="talk-image">
+                            <img src="{{ talk.image.url }}" alt="{{ talk.title }}">
+                        </div>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

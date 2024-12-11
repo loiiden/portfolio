@@ -229,7 +229,163 @@ main {
     font-weight: bold;
     color: #444;
 }
+/* Секция бесед */
+.talks-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
 
+/* Заголовок секции */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Список бесед */
+.talks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Элемент беседы */
+.talk-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Контейнер для контента беседы */
+.talk-content {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+/* Изображение беседы */
+.talk-image img {
+    max-width: 150px;
+    margin-right: 10px;
+    border-radius: 8px;
+    align-self: center;
+}
+
+/* Детали беседы */
+.talk-details {
+    flex: 1;
+}
+
+.talk-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.talk-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.talk-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.talk-place {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Секция курсов */
+.courses-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Заголовок секции */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Список курсов */
+.courses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Элемент курса */
+.course-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Контейнер для контента курса */
+.course-content {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+/* Изображение курса */
+.course-image img {
+    max-width: 150px;
+    margin-right: 10px;
+    border-radius: 8px;
+    align-self: center;
+}
+
+/* Детали курса */
+.course-details {
+    flex: 1;
+}
+
+.course-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.course-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.course-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.course-place {
+    font-weight: bold;
+    color: #444;
+}
 /* Секция контактов */
 .contact-section {
     padding: 2rem;
