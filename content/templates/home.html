@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="welcome-saying">
-    <h1>{{ content.title }}</h1>
-</div>
-<div class="homepage-content">
-    
-    <div class="homepage-image">
+<div class="homepage-wrapper col">
+
+
+    <div class="homepage-content">
+        <div class="welcome-block row">
+            <div class="homepage-image-1">
+                <img src="{{ content.photo1.url }}" alt="photo1">
+            </div>
+            <div class="homepage-col-2 col">
+                <div class="homepage-right-text-block col">
+                    <div class="homepage-title">
+                        <h1>{{ content.title }}</h1>
+                    </div>
+                    <div class="homepage-text-1">
+                        <h4>{{ content.description }}</h4>
+                    </div>
+                </div>
+                <div class="homepage-image-2">
+                    <img src="{{ content.photo2.url }}" alt="photo1">
+                </div>
+            </div>
+        </div>
+
 
     </div>
-    {{ content.description }}
 </div>
 {% endblock %}

@@ -42,5 +42,7 @@ class Course(models.Model):
 class HomepageContent(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    photo1 = models.ImageField(upload_to="content/img/", null=True, blank=True)
+    photo2 = models.ImageField(upload_to="content/img", null=True, blank=True)
     def __str__(self):
         return self.title
