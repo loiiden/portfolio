@@ -108,7 +108,11 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
+@media (max-width: 640px) {
+    main {
+        padding: 0;
+    }
+}
 
 
 /* Секция публикаций */
@@ -487,11 +491,19 @@ main {
     width: 80%;
     display: flex;
     margin-left: 10%;
+    overflow: visible;
 }
 @media (max-width: 900px) {
     .homepage-wrapper {
         width: 95%;
         margin-left: 2.5%;
+    }
+}
+@media (max-width: 640px) {
+    .homepage-wrapper
+    {
+       width: 80%;
+        margin: 0 auto;
     }
 }
 .welcome-block
@@ -515,6 +527,11 @@ main {
         height: 400px;
     }
 }
+@media (max-width: 768px) {
+    .welcome-block {
+        height: fit-content;
+    }
+}
 .homepage-col-2
 {
     justify-content: space-between;
@@ -536,6 +553,13 @@ main {
     .homepage-right-text-block
     {
         gap: 10px;
+    }
+}
+@media (max-width: 640px)
+{
+    .homepage-right-text-block
+    {
+        gap: 40px;
     }
 }
 @media (max-width: 768px) {
@@ -564,19 +588,33 @@ main {
         font-size: 12px;
     }
 }
+@media(max-width: 640px)
+{
+    .homepage-text-1
+    {
+        font-size: medium;
+        display: block;
+        margin-block-start: 1.33em;
+        margin-block-end: 1.33em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+}
 
 .homepage-content{
     display: flex;
     gap: 40px;
     justify-items: center;
 }
-
+/*
 @media (max-width: 640px){
     .homepage-content
     {
         display: none;
     }
-}
+}*/
 
 .homepage-image-1 img{
 
@@ -585,7 +623,13 @@ main {
     background-size: cover;
     border: solid 0 black;
     border-radius: 35px;
+}
 
+@media (max-width: 640px){
+    .homepage-image-1
+    {
+        display: none;
+    }
 }
 
 .homepage-image-2 img{
@@ -595,6 +639,54 @@ main {
     border: solid 0 black;
     border-radius: 35px;
     flex-shrink: 0;
+}
+@media (max-width: 640px) {
+    .homepage-image-2 img
+    {
+        display: none;
+    }
+}
+.homepage-slider-mobile {
+    position: relative;
+    left: -12.5%;
+    width: 125%;
+    max-width: 600px;
+    margin: auto;
+    overflow-x: scroll; /* Включаем горизонтальную прокрутку */
+    -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+    scrollbar-width: none; /* Для Firefox */
+}
+.homepage-slider-mobile::-webkit-scrollbar
+{
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .homepage-slider-mobile
+    {
+       display: none;
+    }
+}
+
+.slides {
+    display: flex;
+    gap: 10%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.slides img {
+
+    width: 200px;
+    aspect-ratio: 1/1.5;
+    background-size: cover;
+    border: solid 0 black;
+    border-radius: 35px;
+    flex-shrink: 0;
+}
+.padding-elem
+{
+    padding-right: 0.1px;
 }
 
 

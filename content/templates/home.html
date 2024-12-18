@@ -3,7 +3,7 @@
 <div class="homepage-wrapper col">
 
 
-    <div class="homepage-content">
+    <div class="homepage-content col">
         <div class="welcome-block row">
             <div class="homepage-image-1">
                 <img src="{{ content.photo1.url }}" alt="photo1">
@@ -22,8 +22,24 @@
                 </div>
             </div>
         </div>
-
-
+        <div class="homepage-slider-mobile">
+            <div class="slides">
+                <div class="padding-elem"></div>
+                {% if content.photo3_mobile %}
+                    <img src="{{ content.photo3_mobile.url }}" alt="Image 1">
+                {% endif %}
+                {% if content.photo4_mobile %}
+                    <img src="{{ content.photo4_mobile.url }}" alt="Image 2">
+                {% endif %}
+                {% if content.photo5_mobile %}
+                    <img src="{{ content.photo5_mobile.url }}" alt="Image 3">
+                {% endif %}
+                <div class="padding-elem"></div>
+            </div>
+        </div>
+        <div class="homepage-long-text">
+            <h4>{{ content.text2 }}</h4>
+        </div>
     </div>
 </div>
 {% endblock %}
