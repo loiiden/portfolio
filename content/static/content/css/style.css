@@ -57,8 +57,13 @@ header nav a:hover {
 #open-btn
 {
     position: fixed;
-    right: 5px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+
+    background-image: url("../img/open-menu.svg");
+    background-size: cover;
 }
 @media (min-width: 640px) {
     #open-btn
@@ -74,26 +79,40 @@ header nav a:hover {
 #close-btn
 {
     position: fixed;
-    right: 5px;
-    top: 5px;
-    width: 27.73px;
-    height: 22px;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url("../img/close-menu.svg");
 }
 .side-nav {
     right: 0;
     top: 0;
     position: fixed;
-    padding: 20px 20px;
+
     z-index: 5;
-    background-color: #333;
+    background-color: white;
     justify-content: center;
-    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
     user-select: none;
+    align-items: center;
+}
+.link-holder
+{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    gap: 1.5rem;
+    background-color: #E4E4E4;
+    border-radius: 35px;
 }
 .side-nav a {
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 2rem;
     transition: color 0.3s ease;
 }
 .side-nav a:hover {
@@ -200,6 +219,13 @@ main {
     align-items: center;
     
 }
+@media (max-width: 640px) {
+    .publication-content
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 /* Секция событий */
 .events-section {
@@ -245,11 +271,22 @@ main {
 }
 
 /* Изображение события */
+img
+{
+    user-select: none;
+}
 .event-image img {
     max-width: 150px;
     margin-right: 10px;
     border-radius: 8px;
     align-self: center;
+}
+@media (max-width: 640px) {
+    .event-image
+    {
+        display: none;
+    }
+
 }
 
 /* Детали события */
@@ -527,7 +564,7 @@ main {
         height: 400px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .welcome-block {
         height: fit-content;
     }
@@ -592,6 +629,7 @@ main {
 {
     .homepage-text-1
     {
+        text-align: justify;
         font-size: medium;
         display: block;
         margin-block-start: 1.33em;
@@ -601,6 +639,11 @@ main {
         font-weight: bold;
         unicode-bidi: isolate;
     }
+    .homepage-long-text
+    {
+        text-align: justify;
+    }
+
 }
 
 .homepage-content{
